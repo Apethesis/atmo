@@ -53,7 +53,7 @@ namespace skyline {
 
     thread_local inline JniEnvironment env;
 
-    JvmManager::JvmManager(JNIEnv *environ, jobject instance)
+    JvmManager::JvmManager(JNIEnv *environ, jobject instance) // jesus christ what is it calling and where is it
         : instance{environ->NewGlobalRef(instance)},
           instanceClass{reinterpret_cast<jclass>(environ->NewGlobalRef(environ->GetObjectClass(instance)))},
           initializeControllersId{environ->GetMethodID(instanceClass, "initializeControllers", "()V")},
@@ -104,7 +104,7 @@ namespace skyline {
         auto jAmplitudes{env->NewIntArray(static_cast<jsize>(amplitudes.size()))};
         env->SetIntArrayRegion(jAmplitudes, 0, static_cast<jsize>(amplitudes.size()), amplitudes.data());
 
-        env->CallVoidMethod(instance, vibrateDeviceId, index, jTimings, jAmplitudes);
+        env->CallVoidMethod(instance, vibrateDeviceId, index, jTimings, jAmplitudes); // this is where it actually calls the thing
 
         env->DeleteLocalRef(jTimings);
         env->DeleteLocalRef(jAmplitudes);
