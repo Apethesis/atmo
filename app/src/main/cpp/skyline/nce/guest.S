@@ -48,7 +48,7 @@ SaveCtx:
     MRS	X0, NZCV
     STR	W0, [LR, #0x2C0]
     MOV X0, SP
-    STR X0, [L4, #0x2C4]
+    STR X0, [LR, #0x2C4]
     LDR X0, [SP], #16 
 
     /* Restore Scratch Register */
