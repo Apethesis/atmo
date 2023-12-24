@@ -99,6 +99,7 @@ namespace skyline {
             u8 *tpidrroEl0; //!< Emulated HOS TPIDRRO_EL0
             u8 *tpidrEl0; //!< Emulated HOS TPIDR_EL0
             u32 nzcv;
+            u8 *guestSP;
             const DeviceState *state;
             u64 magic{constant::SkyTlsMagic};
         };

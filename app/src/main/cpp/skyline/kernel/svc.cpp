@@ -1225,7 +1225,7 @@ namespace skyline::kernel::svc {
             for (size_t i{}; i < targetContext.fpr.regs.size(); i++)
                 context.vreg[i] = targetContext.fpr.regs[i];
 
-            context.sp = targetContext.sp; // i have absolutely no clue if this'll do anything
+            context.sp = targetContext.guestSP;
             
             context.fpcr = targetContext.fpr.fpcr;
             context.fpsr = targetContext.fpr.fpsr;
