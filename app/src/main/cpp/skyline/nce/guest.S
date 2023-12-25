@@ -46,7 +46,7 @@ SaveCtx:
     MRS	X0, FPCR
     STR	W0, [LR, #0x29C]
     MRS	X0, NZCV
-    STR	W0, [LR, #0x2C0]
+    STR	X0, [LR, #0x2C8]
     MOV X0, SP
     STR W0, [LR, #0x2C4]
     LDR X0, [SP], #16 

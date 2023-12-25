@@ -105,7 +105,7 @@ namespace skyline {
         };
 
         namespace guest {
-            constexpr size_t SaveCtxSize{38}; //!< The size of the SaveCtx function in 32-bit ARMv8 instructions
+            constexpr size_t SaveCtxSize{40}; //!< The size of the SaveCtx function in 32-bit ARMv8 instructions
             constexpr size_t LoadCtxSize{36}; //!< The size of the LoadCtx function in 32-bit ARMv8 instructions
 
             /**
