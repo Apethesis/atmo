@@ -60,7 +60,7 @@ namespace skyline::applet {
             input::NpadStyleSet styleSet;
             u32 joyHoldType;
         };
-        static_assert(sizeof(ControllerSupportArgPrivate) == 0x14);
+        static_assert(sizeof(ControllerSupportArgPrivate) == 0x18);
 
         /**
          * @brief Set of arguments required for the ShowControllerSupport mode, templated since the number of controller supported varies based on applet version
