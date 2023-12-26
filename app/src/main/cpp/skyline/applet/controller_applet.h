@@ -17,6 +17,8 @@ namespace skyline::applet {
          * @brief The version of the controller applet interface that an application supports
          */
         enum class ControllerAppletVersion : u32 {
+            Version1 = 0x1, // 0x1 and 0x2 added for pre-1.0.0
+            Version2 = 0x2,
             Version3 = 0x3, // 1.0.0 - 2.3.0
             Version4 = 0x4, // 3.0.0 - 5.1.0
             Version5 = 0x5, // 6.0.0 - 7.0.1
@@ -32,7 +34,7 @@ namespace skyline::applet {
             ShowControllerSupport = 0,
             ShowControllerStrapGuide = 1,
             ShowControllerFirmwareUpdate = 2,
-            ShowControllerKeyRemappingForSystem = 3,
+            ShowControllerKeyRemappingForSystem = 4,
 
             MaxControllerSupportMode
         };
@@ -41,8 +43,8 @@ namespace skyline::applet {
          * @brief The caller that is requesting the controller applet
          */
         enum class ControllerSupportCaller : u8 {
-            Application = 1,
-            System = 2
+            Application = 0,
+            System = 1
         };
 
         /**
