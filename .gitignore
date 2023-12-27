@@ -106,3 +106,5 @@ libVkLayer_adreno.so
 
 # Output Metadata
 output-metadata.json
+.idea/migrations.xml
+.idea/.gitignore
