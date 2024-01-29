@@ -39,6 +39,7 @@ import emu.skyline.settings.EmulationSettings
 import emu.skyline.settings.SettingsActivity
 import emu.skyline.utils.GpuDriverHelper
 import emu.skyline.utils.WindowInsetsHelper
+import emu.skyline.utils.SearchLocationHelper
 import javax.inject.Inject
 import kotlin.math.ceil
 
